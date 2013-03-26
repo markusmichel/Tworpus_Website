@@ -6,7 +6,8 @@ Tworpus.Controller = (function(app) {
 
 	init = function() {
 		tweets = new Array();
-		askForStats();
+		//askForStats();
+		initUI(null);
 		$('#hintbox').hide();
 	},
 
@@ -15,7 +16,7 @@ Tworpus.Controller = (function(app) {
 		if(stats == null) {
 			$.ajax({
   				type: "POST",
-  				url: 'http://localhost:8888/tworpus/api.php',
+  				url: 'http://tools.mi.ur.de/tworpus/api.php',
   				data: {query: "getstats"},
   				success: initUI
 			});
@@ -27,9 +28,9 @@ Tworpus.Controller = (function(app) {
 			var obj = jQuery.parseJSON(data);
 			stats = jQuery.parseJSON(data);
 		}
-		var output = "Tworpus is a free online tool helping you to get a corpus with as many tweets you need for your research. You decide on <span class='hint language'>language</span>, <span class='hint origin'>origin</span>, <span class='hint timespan'>timespan</span> and <span class='hint size'>size</span> of your sample. The tweets are fetched within twitter's <a class=\"external_link\" href=\"https://dev.twitter.com/pages/api_terms\" target=\"_blank\">rules of the road</a>. We only gather tweet ids and non personal meta information. The tweets itself are recreated on the fly with your own twitter account. Go to <a href='generate.php' class='internal_link'>generate</a> to build your own twitter corpus!";
-		output += " <br /><br /> Currently you can access <span class='hint'>" + stats.result.tweetcount + "</span> tweets in <span class='hint'>" + stats.result.tweetsbycountries.length + "</span> languages. The oldest tweet is from <span class='hint tweet' id=" + stats.result.idoffirsttweet + ">" + (new Date(stats.result.timeoffirsttweet*1000)) + "</span> and the latest one is from from <span class='hint tweet' id=" + stats.result.idoflasttweet + ">" + (new Date(stats.result.timeoflasttweet*1000)) + "</span>.";
-		$('.info_text').html(output);
+		//var output = "Tworpus is a free online tool helping you to get a corpus with as many tweets you need for your research. You decide on <span class='hint language'>language</span>, <span class='hint origin'>origin</span>, <span class='hint timespan'>timespan</span> and <span class='hint size'>size</span> of your sample. The tweets are fetched within twitter's <a class=\"external_link\" href=\"https://dev.twitter.com/pages/api_terms\" target=\"_blank\">rules of the road</a>. We only gather tweet ids and non personal meta information. The tweets itself are recreated on the fly with your own twitter account. Go to <a href='generate.php' class='internal_link'>generate</a> to build your own twitter corpus!";
+		//output += " <br /><br /> Currently you can access <span class='hint'>" + stats.result.tweetcount + "</span> tweets in <span class='hint'>" + stats.result.tweetsbycountries.length + "</span> languages. The oldest tweet is from <span class='hint tweet' id=" + stats.result.idoffirsttweet + ">" + (new Date(stats.result.timeoffirsttweet*1000)) + "</span> and the latest one is from from <span class='hint tweet' id=" + stats.result.idoflasttweet + ">" + (new Date(stats.result.timeoflasttweet*1000)) + "</span>.";
+		//$('.info_text').html(output);
 
 		$('.hint').mouseenter(function(e) {
 			$('#hintbox').css({top: e.pageY+20, left: e.pageX+20 });

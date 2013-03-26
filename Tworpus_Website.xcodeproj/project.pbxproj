@@ -6,11 +6,106 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		F0695B7D17019770009B66AF /* impress.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = impress.php; sourceTree = "<group>"; };
+		F0695B7E1701977E009B66AF /* generator.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = generator.php; sourceTree = "<group>"; };
+		F0695B7F1701CDA5009B66AF /* software.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = software.php; sourceTree = "<group>"; };
+		F0695B811701D131009B66AF /* footer.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = footer.php; sourceTree = "<group>"; };
+		F0695B821701D227009B66AF /* header.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = header.php; sourceTree = "<group>"; };
+		F0695B831701D286009B66AF /* nav.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = nav.php; sourceTree = "<group>"; };
+		F0695B841701D347009B66AF /* head.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = head.php; sourceTree = "<group>"; };
+		F0695B851701D886009B66AF /* socialmediabar.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = socialmediabar.php; sourceTree = "<group>"; };
+		F0695B861701D973009B66AF /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = css/img/facebook.png; sourceTree = SOURCE_ROOT; };
+		F0695B871701D973009B66AF /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = css/img/twitter.png; sourceTree = SOURCE_ROOT; };
+		F0695B881701D973009B66AF /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = youtube.png; path = css/img/youtube.png; sourceTree = SOURCE_ROOT; };
+		F0695B891701DD3C009B66AF /* stats.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = stats.php; sourceTree = "<group>"; };
+		F0695B8A1701DEEE009B66AF /* functions.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = functions.php; sourceTree = "<group>"; };
+		F0695B8B1701DF23009B66AF /* api.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = api.php; sourceTree = "<group>"; };
+		F0695B8C1701DF23009B66AF /* db_connect.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = db_connect.php; sourceTree = "<group>"; };
+		F092120416E5F23A00CFD81F /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
+		F092120C16E6218300CFD81F /* web.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = web.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		F092120E16E621E500CFD81F /* Controller.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Controller.js; sourceTree = "<group>"; };
+		F092121016E621E500CFD81F /* jcanvas.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jcanvas.min.js; sourceTree = "<group>"; };
+		F092121116E621E500CFD81F /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
+		F092121216E621E500CFD81F /* jsOAuth-1.3.6.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsOAuth-1.3.6.min.js"; sourceTree = "<group>"; };
+		F092121316E621E500CFD81F /* Tworpus.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Tworpus.js; sourceTree = "<group>"; };
+		F0FCF61F17008FD4003CA7B1 /* bg_html.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_html.png; path = css/img/bg_html.png; sourceTree = SOURCE_ROOT; };
+		F0FCF62017008FD4003CA7B1 /* bg_nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_nav.png; path = css/img/bg_nav.png; sourceTree = SOURCE_ROOT; };
+		F0FCF62117008FD4003CA7B1 /* external_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = external_link.png; path = css/img/external_link.png; sourceTree = SOURCE_ROOT; };
+		F0FCF62217008FD4003CA7B1 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loader.gif; path = css/img/loader.gif; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
+		F0695B801701D127009B66AF /* php */ = {
+			isa = PBXGroup;
+			children = (
+				F0695B8B1701DF23009B66AF /* api.php */,
+				F0695B8C1701DF23009B66AF /* db_connect.php */,
+				F0695B811701D131009B66AF /* footer.php */,
+				F0695B821701D227009B66AF /* header.php */,
+				F0695B831701D286009B66AF /* nav.php */,
+				F0695B841701D347009B66AF /* head.php */,
+				F0695B851701D886009B66AF /* socialmediabar.php */,
+				F0695B891701DD3C009B66AF /* stats.php */,
+				F0695B8A1701DEEE009B66AF /* functions.php */,
+			);
+			path = php;
+			sourceTree = "<group>";
+		};
 		F09211F416E5F1F100CFD81F = {
 			isa = PBXGroup;
 			children = (
+				F0695B801701D127009B66AF /* php */,
+				F092120D16E621E500CFD81F /* js */,
+				F092120B16E6218300CFD81F /* css */,
+				F09211FE16E5F23A00CFD81F /* img */,
+				F092120416E5F23A00CFD81F /* index.php */,
+				F0695B7D17019770009B66AF /* impress.php */,
+				F0695B7E1701977E009B66AF /* generator.php */,
+				F0695B7F1701CDA5009B66AF /* software.php */,
 			);
+			sourceTree = "<group>";
+		};
+		F09211FE16E5F23A00CFD81F /* img */ = {
+			isa = PBXGroup;
+			children = (
+				F0695B861701D973009B66AF /* facebook.png */,
+				F0695B871701D973009B66AF /* twitter.png */,
+				F0695B881701D973009B66AF /* youtube.png */,
+				F0FCF61F17008FD4003CA7B1 /* bg_html.png */,
+				F0FCF62017008FD4003CA7B1 /* bg_nav.png */,
+				F0FCF62117008FD4003CA7B1 /* external_link.png */,
+				F0FCF62217008FD4003CA7B1 /* loader.gif */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		F092120B16E6218300CFD81F /* css */ = {
+			isa = PBXGroup;
+			children = (
+				F092120C16E6218300CFD81F /* web.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		F092120D16E621E500CFD81F /* js */ = {
+			isa = PBXGroup;
+			children = (
+				F092120E16E621E500CFD81F /* Controller.js */,
+				F092120F16E621E500CFD81F /* libs */,
+				F092121316E621E500CFD81F /* Tworpus.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		F092120F16E621E500CFD81F /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F092121016E621E500CFD81F /* jcanvas.min.js */,
+				F092121116E621E500CFD81F /* jquery-1.7.2.min.js */,
+				F092121216E621E500CFD81F /* jsOAuth-1.3.6.min.js */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

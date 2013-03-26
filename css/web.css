@@ -1,0 +1,269 @@
+/** Links **/
+
+a {
+	text-decoration:underline;
+	color:rgb(172,88,250);
+}
+
+/** Font **/
+header .header_heading_h1 {
+	font-weight: 100;
+	color:rgb(20,20,20);
+	text-shadow: 1px 1px 0px rgb(220,220,220);
+}
+
+header .header_heading_h2 {
+	font-weight: 400;
+	color:rgb(60,60,60);
+	text-shadow: 1px 1px 0px rgb(220,220,220);
+}
+
+nav .menu_item {
+	color:rgb(60,60,60);
+}
+
+nav .active {
+	font-weight:700;
+	color:rgb(60,60,60);
+}
+
+footer .information {
+	font-weight:100;
+	font-size:0.8em;
+	color:rgb(60,60,60);
+	text-shadow: 1px 1px 0px rgb(220,220,220);
+}
+
+section #content {
+	color:rgb(60,60,60);
+	line-height:1.3em;
+	font-weight:300;
+}
+
+section #content h1 {
+	font-weight:100;
+}
+
+section #content h2 {
+	font-weight:300;
+	font-size:1.3em;
+}
+
+#stats {
+	color:rgb(60,60,60);
+	font-size:0.9em;
+}
+
+#stats h1 {
+	font-weight:100;
+	font-size:1em;
+	
+}
+
+#stats .value {
+	color:rgb(180,4,134);
+	font-size:0.9em;
+}
+
+#stats h2 {
+	font-weight:100;
+	font-size:0.9em;
+}
+
+/** Layout **/
+
+body {
+	background-color:rgb(220,220,220);
+	background-image: url('img/bg_html.png');
+	background-repeat:repeat;
+	font-family:'Roboto', sans-serif;
+}
+
+header {
+	position:absolute;
+	top:20px;
+	left:-20px;
+	width:900px;
+	height:80px;
+	
+	padding-left:40px;
+	
+	background-color:rgb(240,240,240);
+	
+	border-color:rgb(220,220,220);
+	border-width:1px;
+	box-shadow: 3px 3px 3px rgb(220,220,220);
+	-moz-border-radius-topright:8px;
+   	-webkit-border-top-right-radius:8px;
+    border-top-right-radius:8px;
+}
+
+header h1 {
+	display: inline-block;
+	line-height:60px;
+}
+
+header h2 {
+	display: inline-block;
+	line-height:60px;
+}
+
+nav {
+	position:absolute;
+	top:120px;
+	width:200px;
+	left:20px;
+}
+
+nav ul {
+	margin:0px;
+	padding:0px;
+}
+
+nav ul li {
+	display:block;
+	float:left;
+	width:200px;
+	height:40px;
+	
+	margin-left:0px;
+	margin-bottom:5px;
+	padding-left:10px;
+	
+	line-height:40px;
+	
+	list-style:none;
+	
+	border-color:rgb(220,220,220);
+	border-style:solid;
+	border-top-width:2px;
+	border-bottom-width:2px;
+	border-left-width:2px;
+	border-right-width:0px;
+	
+	-moz-border-radius-topleft:8px;
+   	-webkit-border-top-left-radius:8px;
+    border-top-left-radius:8px;
+	-moz-border-radius-bottomleft:8px;
+   	-webkit-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+
+nav ul .selected {
+	background-color:rgb(240,240,240);
+}
+
+section {
+	background-color:rgb(240,240,240);
+	position:absolute;
+	top:90px;
+	width:700px;
+	height:600px;
+	
+	left:220px;
+	
+	border-color:rgb(220,220,220);
+	border-width:1px;
+	box-shadow: 3px 3px 3px rgb(220,220,220);
+}
+
+section #content {
+	padding-left:10px;
+	padding-right:10px;
+	background-color:rgb(240,240,240);
+	position:relative;
+	width:670px;
+	height:570px;
+	margin-top:15px;
+	margin-bottom:15px;
+	overflow:auto;
+}
+
+#socialmedia {
+	position:absolute;
+	top:120px;
+	width:64px;
+	height:252px;
+	left:940px;
+}
+
+#socialmedia .icon {
+	display:block;
+	width:64px;
+	height:64px;
+	margin-top:20px;
+	background-repeat:no-repeat;
+}
+
+#socialmedia .twitter {
+	background-image:url('img/twitter.png');
+}
+
+#socialmedia .facebook {
+	background-image:url('img/facebook.png');
+}
+
+#socialmedia .youtube {
+	background-image:url('img/youtube.png');
+}
+
+#stats {
+	position:absolute;
+	top:330px;
+	width:200px;
+	left:20px;
+	text-align:center;
+	
+	background-color:rgb(240,240,240);
+	
+	border-color:rgb(220,220,220);
+	border-style:solid;
+	border-top-width:2px;
+	border-bottom-width:2px;
+	border-left-width:2px;
+	border-right-width:0px;
+	
+	-moz-border-radius-topleft:8px;
+   	-webkit-border-top-left-radius:8px;
+    border-top-left-radius:8px;
+	-moz-border-radius-bottomleft:8px;
+   	-webkit-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+
+#stats h2 {
+	margin-bottom:2px;
+}
+
+#stats .lang {
+	padding-left: 5px;
+}
+
+footer {
+	background-color:rgb(240,240,240);
+	position:absolute;
+	top:690px;
+	width:680px;
+	
+	left:220px;
+	
+	padding:10px;
+	
+	box-shadow: 3px 3px 3px rgb(220,220,220);
+	border-color:rgb(220,220,220);
+	border-width:1px;
+	-moz-border-radius-bottomleft:8px;
+   	-webkit-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px;
+	-moz-border-radius-bottomright:8px;
+   	-webkit-border-bottom-right-radius:8px;
+    border-bottom-right-radius:8px;
+	
+	text-align:center;
+}
+
+/** Hover-Effects **/
+
+nav ul li:hover {
+	background-color:rgb(240,240,240);
+}

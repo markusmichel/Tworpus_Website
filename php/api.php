@@ -36,60 +36,45 @@ function getStats() {
 }
 
 function gettotaltweetcount() {
-	$sql = mysql_query("SELECT COUNT(_id) AS count FROM tweets");
+	$sql = mysql_query("SELECT tweets FROM stats");
 	$result = mysql_fetch_assoc($sql); 
-	return $result['count'];
+	return $result['tweets'];
 }
 
 function getTimestampForFirstTweet() {
-	$sql = mysql_query("SELECT ROUND(_timestamp/1000, 0) AS time FROM tweets ORDER BY _id ASC LIMIT 1");
+	$sql = mysql_query("SELECT first_tweet_timestamp AS time FROM stats");
 	$result = mysql_fetch_assoc($sql); 
 	return $result['time'];
 }
 
 function getTimestampForLastTweet() {
-	$sql = mysql_query("SELECT ROUND(_timestamp/1000, 0) AS time FROM tweets ORDER BY _id DESC LIMIT 1");
+	$sql = mysql_query("SELECT last_tweet_timestamp AS time FROM stats");
 	$result = mysql_fetch_assoc($sql); 
 	return $result['time'];
 }
 
 function getIdForFirstTweet() {
-	$sql = mysql_query("SELECT _id AS id FROM tweets ORDER BY _id ASC LIMIT 1");
+	$sql = mysql_query("SELECT _id AS id FROM tweets WHERE _timestamp = (SELECT first_tweet_timestamp AS time FROM stats)*1000");
 	$result = mysql_fetch_assoc($sql); 
 	return $result['id'];
 }
 
 function getIdForLastTweet() {
-	$sql = mysql_query("SELECT _id AS id FROM tweets ORDER BY _id DESC LIMIT 1");
+	$sql = mysql_query("SELECT _id AS id FROM tweets WHERE _timestamp = (SELECT last_tweet_timestamp AS time FROM stats)*1000");
 	$result = mysql_fetch_assoc($sql); 
 	return $result['id'];
 }
 
 function getTotalTweetsByCountries() {
-	$sql = mysql_query("SELECT langs._langcode AS country, COUNT(tweets._id) AS count FROM langs, tweets WHERE tweets._userlang = langs._id GROUP BY tweets._userlang ORDER BY count DESC");
-	$return = array();
-	while($result = mysql_fetch_assoc($sql)) {
-    	$return[] = $result;
-	}
-	return json_encode($return);
+	return "";
 }
 
 function getTenMostUsedHashTags() {
-	$sql = mysql_query("SELECT tags._tag AS tag, COUNT(tweetstotags._tweetid) AS count FROM tweetstotags, tags WHERE tags._id = tweetstotags._tagid GROUP BY tweetstotags._tagid ORDER BY count DESC LIMIT 10");
-	$return = array();
-	while($result = mysql_fetch_assoc($sql)) {
-    	$return[] = $result;
-	}
-	return json_encode($return);
+	return "";
 }
 
 function getTenMostUsedLocations() {
-	$sql = mysql_query("SELECT locations._location AS location, COUNT(tweets._location) AS count FROM locations, tweets WHERE tweets._location = locations._id GROUP BY tweets._location ORDER BY count DESC LIMIT 10");
-	$return = array();
-	while($result = mysql_fetch_assoc($sql)) {
-    	$return[] = $result;
-	}
-	return json_encode($return);
+	return "";
 }
 
 function getSampleForPresentation() {
