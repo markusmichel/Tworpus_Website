@@ -24,11 +24,9 @@
 		F0695B8C1701DF23009B66AF /* db_connect.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = db_connect.php; sourceTree = "<group>"; };
 		F092120416E5F23A00CFD81F /* index.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = index.php; sourceTree = "<group>"; };
 		F092120C16E6218300CFD81F /* web.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = web.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
-		F092120E16E621E500CFD81F /* Controller.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Controller.js; sourceTree = "<group>"; };
 		F092121016E621E500CFD81F /* jcanvas.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jcanvas.min.js; sourceTree = "<group>"; };
 		F092121116E621E500CFD81F /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
 		F092121216E621E500CFD81F /* jsOAuth-1.3.6.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jsOAuth-1.3.6.min.js"; sourceTree = "<group>"; };
-		F092121316E621E500CFD81F /* Tworpus.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Tworpus.js; sourceTree = "<group>"; };
 		F0FCF61F17008FD4003CA7B1 /* bg_html.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_html.png; path = css/img/bg_html.png; sourceTree = SOURCE_ROOT; };
 		F0FCF62017008FD4003CA7B1 /* bg_nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_nav.png; path = css/img/bg_nav.png; sourceTree = SOURCE_ROOT; };
 		F0FCF62117008FD4003CA7B1 /* external_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = external_link.png; path = css/img/external_link.png; sourceTree = SOURCE_ROOT; };
@@ -91,9 +89,7 @@
 		F092120D16E621E500CFD81F /* js */ = {
 			isa = PBXGroup;
 			children = (
-				F092120E16E621E500CFD81F /* Controller.js */,
 				F092120F16E621E500CFD81F /* libs */,
-				F092121316E621E500CFD81F /* Tworpus.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
