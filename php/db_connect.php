@@ -1,10 +1,10 @@
 <?php
 
-$mysqlhost="***"; 
-$mysqluser="***"; 
-$mysqlpwd="***"; 
-$mysqldb="***"; 
-$mysqlport="***";
+$mysqlhost="localhost"; 
+$mysqluser="twitter"; 
+$mysqlpwd="twitter"; 
+$mysqldb="tweets"; 
+$mysqlport="8889";
 
 
 $connection=@mysql_connect($mysqlhost.":".$mysqlport, $mysqluser, $mysqlpwd) or die ('fuck');

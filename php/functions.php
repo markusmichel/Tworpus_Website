@@ -32,13 +32,13 @@ include_once("db_connect.php");
 	function getFirstTweetDate() {
 		$sql = mysql_query("SELECT first_tweet_timestamp FROM stats");
 		$result = mysql_fetch_assoc($sql);
-		return date('d.n.Y H:m', $result['first_tweet_timestamp']);
+		return date('d.n.Y', $result['first_tweet_timestamp']);
 	}
 	
 	function getLastTweetDate() {
 		$sql = mysql_query("SELECT last_tweet_timestamp FROM stats");
 		$result = mysql_fetch_assoc($sql);
-		return date('d.n.Y H:m', $result['last_tweet_timestamp']);
+		return date('d.n.Y', $result['last_tweet_timestamp']);
 	}
 	
 	function getTweetCountForLanguage($lang) {
