@@ -1,16 +1,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="css/web.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.min.css">
 <title>Tworpus</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 <script src="js/libs/jquery.smooth-scroll.min.js"></script>
-
+<script src="js/libs/date.js"></script>
+<script src="js/libs/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="js/libs/jquery-ui-timepicker-addon.js"></script>
+<script src="js/libs/html5slider.js"></script>
 
 <script>
+
+function initUI(page) {
+	setActiveMenuItem(page);
+	enableDatePicker();
+	clearPage();
+}
+
 function setActiveMenuItem(page) {
 	$('nav .'+page).addClass('active selected');
+}
+
+function clearPage() {
 	$('.result').html('');
+}
+
+function enableDatePicker() {
+	$('#time_selection_start').datetimepicker();
+	$('#time_selection_end').datetimepicker();
 }
 
 function scrollToDiv(id){
@@ -45,6 +64,19 @@ function buildCorpus() {
 	var size = 0;
 	var retweeted = 0;
 	var favoured = 0;
+	var start_date = "-1";
+	var end_date = "-1";
+	
+	var min_chars = $('.min').val();
+	var max_chars = $('.max').val();
+	
+	if($('#time_selection_start').val() != "") {
+		start_date = Date.parse($('#time_selection_start').val()).getTime();
+	}
+	
+	if($('#time_selection_end').val() != "") {
+		end_date = Date.parse($('#time_selection_end').val()).getTime();
+	}
 	
 	$('#language_step').find('.lang').each(function(i) {
 		if($(this).is(':checked')) {
@@ -53,30 +85,20 @@ function buildCorpus() {
 	});
 	
 	size = $('.size').val();
-	
-	if($('.retweeted').is(':checked')) {
-		retweeted = 1;
-	}
-	
-	if($('favoured').is(':checked')) {
-		favoured = 1;
-	}
 
 	langs = langs.substring(0, langs.length - 1);
 	
 	$.ajax({
 		   type: "POST",
 		   url: 'php/api.php',
-		   data: {query: "getsample", langs: langs, size: size, retweeted: retweeted, favoured: favoured},
+		   data: {query: "getsample", langs: langs, size: size, retweeted: retweeted, favoured: favoured, start: start_date, end: end_date, min_chars: min_chars, max_chars: max_chars},
 		   success: showSample
 	});
 }
 
 function showSample(data) {
 	console.log(data);
-	
 	$('.waiting').fadeOut(400).addClass('hidden');
-	
 	$('.result').delay(400).fadeIn(400).html('<a href="' + data + '" target="_blank" style="text-decoration:underline">download your corpora</a>')
 	
 }

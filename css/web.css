@@ -54,6 +54,13 @@ section #content .button {
 	font-size:1.1em;
 }
 
+section #content .start {
+	font-weight:400;
+	font-size:1.1em;
+	text-decoration:none;
+	color:rgb(60,60,60);
+}
+
 #stats {
 	color:rgb(60,60,60);
 	font-size:0.9em;
@@ -191,17 +198,14 @@ section #content {
 
 
 section #content .start {
-	margin-top: 100px;
-}
-
-section #content .button {
 	display:block-inline;
 	width:150px;
 	height:30px;
-	line-height:30px;
+	margin-top: 100px;
 	margin-left:auto;
 	margin-right:auto;
 	
+	line-height:30px;
 	text-align:center;
 	
 	background: #b4df5b;
@@ -234,6 +238,56 @@ section #content .button {
     border-topright-radius:8px;
 }
 
+section #content .buttons {
+	display:block-inline;
+	width:330px;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+
+section #content .button {
+	display:block-inline;
+	float:left;
+	width:150px;
+	height:30px;
+	margin-left:5px;
+	margin-right:5px;
+	line-height:30px;
+	text-align:center;
+	
+	background: #b4df5b;
+	background: -moz-linear-gradient(top, #b4df5b 0%, #b4df5b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4df5b), color-stop(100%,#b4df5b));
+	background: -webkit-linear-gradient(top, #b4df5b 0%,#b4df5b 100%);
+	background: -o-linear-gradient(top, #b4df5b 0%,#b4df5b 100%);
+	background: -ms-linear-gradient(top, #b4df5b 0%,#b4df5b 100%);
+	background: linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4df5b', endColorstr='#b4df5b',GradientType=0 );
+	
+	border-color:rgb(220,220,220);
+	border-style:solid;
+	border-top-width:2px;
+	border-bottom-width:2px;
+	border-left-width:2px;
+	border-right-width:0px;
+	
+	-moz-border-radius-topleft:8px;
+   	-webkit-border-top-left-radius:8px;
+    border-top-left-radius:8px;
+	-moz-border-radius-bottomleft:8px;
+   	-webkit-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px;
+	-moz-border-radius-bottomright:8px;
+   	-webkit-border-bottom-right-radius:8px;
+    border-bottom-right-radius:8px;
+	-moz-border-radius-topright:8px;
+   	-webkit-border-top-right-radius:8px;
+    border-topright-radius:8px;
+}
+
+
+
 section #content .back {
 	background: #ff3019; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
@@ -246,6 +300,10 @@ section #content .back {
 }
 
 section #content .button:hover{
+	cursor:pointer;
+}
+
+section #content .start:hover{
 	cursor:pointer;
 }
 
@@ -262,6 +320,11 @@ section #content .form {
 
 section #content .form .checkbox_selection {
 	display:block;
+	margin:5px;
+}
+
+section #content .form input:hover {
+	cursor:pointer;
 }
 
 section .waiting {
@@ -377,3 +440,15 @@ footer {
 nav ul li:hover {
 	background-color:rgb(240,240,240);
 }
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }

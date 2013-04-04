@@ -4,7 +4,7 @@
 <?php include_once('php/functions.php') ;?>
 <?php include 'php/head.php'; ?>
 
-<body onload="setActiveMenuItem('software')">
+<body onload="initUI('software')">
 
 <?php include 'php/header.php'; ?>
 <?php include 'php/nav.php'; ?>
@@ -22,7 +22,7 @@ The crawler application we are using to retriev tweets is based upon a java impl
 <h2>Website</h2>
 The web frontend to search in the database and to build personal corpora is available via <a href="https://github.com/alexanderbazo/Tworpus_Website">github</a>.
 <h2>Desktop client</h2>
-comming soon ...
+You can download the desktop client to rebuild your twitter corpus with a corpus file from this website. The tool is available as an app for <a href="downloads/Tworpus.zip" target="_blank">OS X</a> and for other operating systems as a <a href="downloads/Tworpus.jar" target="_blank">JAVA executable</a>.
 </div>
 </section>
 

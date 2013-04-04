@@ -4,7 +4,7 @@
 <?php include_once('php/functions.php') ;?>
 <?php include 'php/head.php'; ?>
 
-<body onload="setActiveMenuItem('index')">
+<body onload="initUI('index')">
 
 <?php include 'php/header.php'; ?>
 <?php include 'php/nav.php'; ?>
