@@ -18,6 +18,7 @@ function parseQuery($query) {
 }
 
 function getSample() {
+	cleanup();
 	$lang_array = explode(",", $_POST['langs']);
 	$langs = "";
 	$tmp = "";
@@ -45,10 +46,10 @@ function getSample() {
 	$file = '../results/'.$filename.'.csv';
 	$f = fopen($file, 'w');
 	
-	$sql = mysql_query("SELECT _id AS id, _userid AS userid, _isfavourited AS favourited, _isretweeted AS retweeted, _tweetlang AS lang, _charcount AS chars, _wordcount AS words FROM tweets WHERE _tweetlang IN (".$langs.") AND _timestamp BETWEEN ".$start_date." AND ".$end_date." AND _charcount BETWEEN ".$min_chars." AND ".$max_chars." LIMIT ".$size."");
+	$sql = mysql_query("SELECT _id AS id, _userid AS userid, _tweetlang AS lang, (SELECT _langcode FROM langs WHERE _id = _tweetlang) AS tweetlang, _charcount AS chars, _wordcount AS words, FLOOR(1 + RAND() * x.m_id) 'rand_ind' FROM tweets, (SELECT MAX(t._id) 'm_id' FROM tweets t) x WHERE tweets._tweetlang IN (".$langs.") AND tweets._timestamp BETWEEN ".$start_date." AND ".$end_date." AND tweets._charcount BETWEEN ".$min_chars." AND ".$max_chars." ORDER BY rand_ind LIMIT ".$size."");
 	
 	while($row = mysql_fetch_object($sql)){
-		fwrite($f, $row->userid.",".$row->id.",".$row->favourited.",".$row->retweeted.",".$row->lang.",".$row->chars.",".$row->words."\r\n");
+		fwrite($f, $row->userid.",".$row->id.",".$row->tweetlang.",".$row->chars.",".$row->words."\r\n");
 	}
 	
 	fclose($f);
@@ -74,6 +75,18 @@ function randomstring($length = 6) {
 		$i++;
 	}
 	return $pass;
+}
+
+function cleanup() {
+	$DIR = '../results/';
+	if ($handle = opendir($DIR)) {
+		while (false !== ($file = readdir($handle))) {
+			if ( filemtime($DIR.$file) <= time()-60*60*24 ) {
+				unlink($DIR.$file);
+			}
+		}
+		closedir($handle);
+	}
 }
 
 

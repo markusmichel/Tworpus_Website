@@ -4,12 +4,13 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.min.css">
 <title>Tworpus</title>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+<script src="js/libs/html5slider.js"></script>
 <script src="js/libs/jquery-1.7.2.min.js"></script>
 <script src="js/libs/jquery.smooth-scroll.min.js"></script>
 <script src="js/libs/date.js"></script>
 <script src="js/libs/jquery-ui-1.10.2.custom.min.js"></script>
 <script src="js/libs/jquery-ui-timepicker-addon.js"></script>
-<script src="js/libs/html5slider.js"></script>
 
 <script>
 
@@ -33,7 +34,6 @@ function enableDatePicker() {
 }
 
 function scrollToDiv(id){
-	console.log('scrolling to #'+id);
 	$.smoothScroll({
 		scrollElement: $('#content'),
 		scrollTarget: '#'+id
@@ -57,8 +57,6 @@ function addCommas(nStr) {
 function buildCorpus() {
 	scrollToDiv('building_step');
 	$('.waiting').fadeOut(400).delay(500).removeClass('hidden').delay(400).fadeIn(500);
-	
-	console.log("sending to server");
 	
 	var langs = "";
 	var size = 0;
@@ -97,9 +95,8 @@ function buildCorpus() {
 }
 
 function showSample(data) {
-	console.log(data);
 	$('.waiting').fadeOut(400).addClass('hidden');
-	$('.result').delay(400).fadeIn(400).html('<a href="' + data + '" target="_blank" style="text-decoration:underline">download your corpora</a>')
+	$('.result').delay(400).fadeIn(400).html('<a href="' + data + '" target="_blank" style="text-decoration:underline">download your corpora (link will be valid for 24 hours)</a>')
 	
 }
 

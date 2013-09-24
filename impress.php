@@ -16,8 +16,8 @@
 <div id="content">
 <h1>Contact</h1>
 Alexander Bazo<br />
-Kornweg 3, 93080 Pentling/Germany<br />
-Phone: +0049 (0)94194219359<br />
+Am Mühlbach 3, 93051 Regensburg <br />
+Phone: +0049 (0)94194219840<br />
 Mail: <a href="mailto:alexander.bazo@ur.de">alexander.bazo@ur.de</a>
 </span>
 <h1>Usage of Twitter content and Twitter REST API</h1>
